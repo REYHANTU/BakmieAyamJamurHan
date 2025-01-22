@@ -17,6 +17,30 @@
                     font-family: Serif;
                 }
 
+                #home {
+                    padding: 20px;
+                }
+
+                .foodTitle {
+                    margin-bottom: -70px;
+                    margin-top: 20px;
+                }
+
+                #product-list {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 20px;
+                }
+                
+
+                .product-section {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center; /* Pusatkan elemen di dalam section */
+                    gap: 20px; /* Tambahkan jarak antar elemen */
+                }
+
                 header {
                     background-color: #343a40;
                     padding: 20px;
@@ -70,16 +94,37 @@
                 }
 
                 .product {
-                    border: 1px solid #ccc;
-                    border-radius: 5px;
-                    margin: 10px 0;
-                    padding: 10px;
-                    background-color: #fff;
+                    width: 320px; /* Lebar konsisten untuk semua produk */
+                    height: 450px; /* Tinggi konsisten untuk semua produk */
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: flex-start;
+                    border: 1px solid #ddd; /* Opsional: Tambahkan border */
+                    border-radius: 10px; /* Opsional: Tambahkan sudut membulat */
+                    margin: 55px; /* Tambahkan spasi antar produk */
+                    padding: 10px; /* Tambahkan padding dalam kontainer */
+                    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opsional: Tambahkan bayangan */
+                    background-color: #f9f9f9; /* Opsional: Tambahkan latar belakang */
                 }
 
                 .product img {
-                    max-width: 100%;
-                    border-radius: 5px;
+                    width: 300px; /* Ukuran gambar konsisten */
+                    height: 200px; /* Tinggi gambar tetap */
+                    object-fit: cover; /* Sesuaikan gambar dengan kotak tanpa mengubah proporsi */
+                    border-radius: 5px; /* Opsional: Tambahkan sudut membulat pada gambar */
+                }
+
+                .product h2 {
+                    font-size: 18px;
+                    margin: 10px 0 5px; /* Spasi antara teks dan elemen lainnya */
+                    text-align: center;
+                }
+
+                .product p {
+                    font-size: 14px;
+                    text-align: center;
+                    margin: 5px 0; /* Spasi antar paragraf */
                 }
 
                 footer {
@@ -119,10 +164,13 @@
     </header>
 
     <main id="home">
-        <section>
-            <h1>Our Products</h1>
-            <h2>Food</h2>
-            <div id="product-list">
+        <h1>Our Products</h1>
+        <div id="product-list">
+            <!-- Section 1 -->
+            <div class="foodTitle">
+                <h2>Food</h2>
+            </div>
+            <div class="product-section">
                 <div class="product">
                     <img src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/af3224e5-270b-42a5-bb7d-5de6fc3b4d0d_Go-Biz_20220218_194116.jpeg?auto=format" 
                     alt="Mie Ayam Jamur" style="width: 300px; height: auto;">
@@ -170,23 +218,101 @@
                     alt="Bacang Ketan Babi" style="width: 300px; height: auto;">
                     <h2 class="product-name">Bacang Ketan Babi</h2>
                     <p>Price: Rp. 25,000</p>
-                    <p>Description: Bacang sticky rice with minced pork filling with soy sauce</p>
+                    <p>Description: Bacang sticky rice with soy sauce minced pork filling</p>
                 </div>
                 <div class="product">
                     <img src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/de5839b2-b48e-4ea5-ac7c-50b7b11131ae_Go-Biz_20230127_154457.jpeg?auto=format" 
                     alt="Mie/Mie Lebar/Kwetiaw/Bihun Ayam Jamur Jumbo" style="width: 300px; height: auto;">
                     <h2 class="product-name">Mie/Mie Lebar/Kwetiaw/Bihun Ayam Jamur Jumbo</h2>
                     <p>Price: Rp. 45,000</p>
-                    <p>Description: Noodles/wide noodles/kwetiaw/mushroom chicken vermicelli with 1.5 servings</p>
+                    <p>Description: Noodles/wide noodles/kwetiaw/mushroom chicken vermicelli with 1.5 portions</p>
                 </div>
-                <!-- Add more product sections as needed -->
             </div>
-            <h2>Drink</h2>
-            <div id="product-list">
-                
+
+            <!-- Section 2 -->
+            <div class="foodTitle">
+                <h2>Drink</h2>
             </div>
-            <!-- Add more product sections as needed -->
-        </section>
+            <div class="product-section">
+                <div class="product">
+                    <img src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/5218152b-ee11-48c1-b616-a9a73be6dbcf_Go-Biz_20240422_133810.jpeg?auto=format" 
+                    alt="Teh Gelas (Botol)" style="width: 300px; height: auto;">
+                    <h2 class="product-name">Teh Gelas (Botol)</h2>
+                    <p>Price: Rp. 11,000</p>
+                    <p>Description: Tea cups 350ml</p>
+                </div>
+                <div class="product">
+                    <img src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/5f149b7c-b75b-4114-bf3b-dd270ef982dc_Go-Biz_20230412_195735.jpeg?auto=format" 
+                    alt="Ichi Ocha Teh Jasmine/Green Tea Botol 350ml" style="width: 300px; height: auto;">
+                    <h2 class="product-name">Ichi Ocha Teh Jasmine/Green Tea Botol 350ml</h2>
+                    <p>Price: Rp. 12,000</p>
+                    <p>Description: Ichi ocha contents 350ml</p>
+                </div>
+                <div class="product">
+                    <img src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/ce67c5c4-d9ea-44d9-82a1-d41a0d577902_Go-Biz_20220213_071204.jpeg?auto=format" 
+                    alt="Teh Pucuk Botol 350ml" style="width: 300px; height: auto;">
+                    <h2 class="product-name">Teh Pucuk Botol 350ml</h2>
+                    <p>Price: Rp. 12,000</p>
+                    <p>Description: Tea Shoot Bottle 350ml</p>
+                </div>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="foodTitle">
+                <h2>Toppings</h2>
+            </div>
+            <div class="product-section">
+                <div class="product">
+                    <img src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/4f5e23fd-03fa-427e-a829-d3e20f107aaf_Go-Biz_20220219_184325.jpeg?auto=format" 
+                    alt="Bakso Cumi" style="width: 300px; height: auto;">
+                    <h2 class="product-name">Bakso Cumi</h2>
+                    <p>Price: Rp. 7,000</p>
+                    <p>Description: Squid meatballs per pcs</p>
+                </div>
+                <div class="product">
+                    <img src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/7328237d-e263-4640-a476-03f87e860061_Go-Biz_20220409_182338.jpeg?auto=format" 
+                    alt="Bakso Sapi" style="width: 300px; height: auto;">
+                    <h2 class="product-name">Bakso Sapi</h2>
+                    <p>Price: Rp. 7,500</p>
+                    <p>Description: Beef meatballs per pcs</p>
+                </div>
+                <div class="product">
+                    <img src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/3968aef8-b6c2-4b09-8f62-ad5dfd9ff115_Go-Biz_20220409_182358.jpeg?auto=format" 
+                    alt="Bakso Ikan" style="width: 300px; height: auto;">
+                    <h2 class="product-name">Bakso Ikan</h2>
+                    <p>Price: Rp. 7,000</p>
+                    <p>Description: Fish meatballs per pcs</p>
+                </div>
+                <div class="product">
+                    <img src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/0cd1a35d-9a69-4e4b-9314-410b53443253_Go-Biz_20221106_105837.jpeg?auto=format" 
+                    alt="Krupuk Bangka Isi 2" style="width: 300px; height: auto;">
+                    <h2 class="product-name">Krupuk Bangka Isi 2</h2>
+                    <p>Price: Rp. 12,500</p>
+                    <p>Description: Bangka crackers contains 2 pcs</p>
+                </div>
+                <div class="product">
+                    <img src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/8db1b793-4dc8-45d4-bcbb-f82e90600568_Go-Biz_20221011_155633.jpeg?auto=format" 
+                    alt="Bakso Kepiting" style="width: 300px; height: auto;">
+                    <h2 class="product-name">Bakso Kepiting</h2>
+                    <p>Price: Rp. 7,500</p>
+                    <p>Description: Crab meatballs per pcs</p>
+                </div>
+                <div class="product">
+                    <img src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/de24f230-ebed-405d-9025-47e0f4888310_Go-Biz_20221011_155740.jpeg?auto=format" 
+                    alt="Bakso Udang" style="width: 300px; height: auto;">
+                    <h2 class="product-name">Bakso Udang</h2>
+                    <p>Price: Rp. 6,500</p>
+                    <p>Description: Shrimp meatballs per pcs</p>
+                </div>
+                <div class="product">
+                    <img src="https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/d63350cb-112a-488a-b5f4-77df54924adf_Go-Biz_20240114_093208.jpeg?auto=format" 
+                    alt="Pangsit Rebus" style="width: 300px; height: auto;">
+                    <h2 class="product-name">Pangsit Rebus</h2>
+                    <p>Price: Rp. 27,000</p>
+                    <p>Description: Dumplings stuffed with chicken and shrimp (5pcs)</p>
+                </div>
+            </div>
+        </div>
     </main>
 
     <footer>
