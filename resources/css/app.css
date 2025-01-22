@@ -24,6 +24,10 @@ h1 {
     margin: 0; /* Remove default margin */
 }
 
+section > h2 {
+    text-align: center;
+}
+
 .search-container {
     margin-right: 10px;
     margin-top: 40px;
